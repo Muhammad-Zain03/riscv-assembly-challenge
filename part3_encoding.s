@@ -9,10 +9,10 @@ instructions:
 
 num_instr: .word 6
 
-lbl_op:   .string "  opcode  = "
-lbl_rd:   .string "  rd      = "
-lbl_f3:   .string "  funct3  = "
-lbl_rs1:  .string "  rs1     = "
+lbl_op:   .string "opcode="
+lbl_rd:   .string " rd="
+lbl_f3:   .string " funct3="
+lbl_rs1:  .string " rs1="
 nl:       .string "\n"
 
 .text
@@ -38,9 +38,6 @@ loop:
     li   a0, 1
     mv   a1, t3
     ecall
-    li   a0, 4
-    la   a1, nl
-    ecall
 
     # rd = (word >> 7) & 0x1F  (bits [11:7])
     srli t3, t2, 7
@@ -50,9 +47,6 @@ loop:
     ecall
     li   a0, 1
     mv   a1, t3
-    ecall
-    li   a0, 4
-    la   a1, nl
     ecall
 
     # funct3 = (word >> 12) & 0x7  (bits [14:12])
@@ -64,9 +58,6 @@ loop:
     li   a0, 1
     mv   a1, t3
     ecall
-    li   a0, 4
-    la   a1, nl
-    ecall
 
     # rs1 = (word >> 15) & 0x1F  (bits [19:15])
     srli t3, t2, 15
@@ -77,11 +68,8 @@ loop:
     li   a0, 1
     mv   a1, t3
     ecall
-    li   a0, 4
-    la   a1, nl
-    ecall
 
-    # print extra newline to separate instructions
+    # print newline after each instruction
     li   a0, 4
     la   a1, nl
     ecall
