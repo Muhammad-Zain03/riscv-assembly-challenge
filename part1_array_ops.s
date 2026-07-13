@@ -1,63 +1,59 @@
-/*
-#include <stdio.h>
-
-int sum_array(int *arr, int size) {
-    int sum = 0;
-    while(size > 0) {
-        sum += *(arr + size - 1);
-        size -= 1;
-    }
-    return sum;
-}
-
-int find_min(int *arr, int size){
-    int min = *(arr + 0);
-    while(size > 1){
-        if(*(arr + size - 1) < min){
-            min = *(arr + size - 1);
-        }
-        size -= 1;
-    }
-    return min;
-}
-
-int find_max(int *arr, int size){
-    int max = *(arr + 0);
-    while(size > 1){
-        if(*(arr + size - 1) > max){
-            max = *(arr + size - 1);
-        }
-        size -= 1;
-    }
-    return max;
-}
-
-int count_negative(int *arr, int size){
-    int count = 0;
-    while(size > 0){
-        if (*(arr + size - 1) < 0){
-            count += 1;
-        }
-    size -= 1;
-    }
-    return count;
-}
-
-
-
-int main(void){
-    int data[12] = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
-    int sum = sum_array(data, 12);
-    printf("Sum is %d\n", sum);
-    int min = find_min(data, 12);
-    printf("Min is %d\n", min);
-    int max = find_max(data, 12);
-    printf("Max is %d\n", max);
-    int count = count_negative(data, 12);
-    printf("count is %d\n", count);
-    return 0;
-}
-*/
+# #include <stdio.h>
+#
+# int sum_array(int *arr, int size) {
+#     int sum = 0;
+#     while(size > 0) {
+#         sum += *(arr + size - 1);
+#         size -= 1;
+#     }
+#     return sum;
+# }
+#
+# int find_min(int *arr, int size){
+#     int min = *(arr + 0);
+#     while(size > 1){
+#         if(*(arr + size - 1) < min){
+#             min = *(arr + size - 1);
+#         }
+#         size -= 1;
+#     }
+#     return min;
+# }
+#
+# int find_max(int *arr, int size){
+#     int max = *(arr + 0);
+#     while(size > 1){
+#         if(*(arr + size - 1) > max){
+#             max = *(arr + size - 1);
+#         }
+#         size -= 1;
+#     }
+#     return max;
+# }
+#
+# int count_negative(int *arr, int size){
+#     int count = 0;
+#     while(size > 0){
+#         if (*(arr + size - 1) < 0){
+#             count += 1;
+#         }
+#     size -= 1;
+#     }
+#     return count;
+# }
+#
+# int main(void){
+#     int data[12] = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
+#     int sum = sum_array(data, 12);
+#     printf("Sum is %d\n", sum);
+#     int min = find_min(data, 12);
+#     printf("Min is %d\n", min);
+#     int max = find_max(data, 12);
+#     printf("Max is %d\n", max);
+#     int count = count_negative(data, 12);
+#     printf("count is %d\n", count);
+#     return 0;
+# }
 
 .data 
 array:      .word -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6
