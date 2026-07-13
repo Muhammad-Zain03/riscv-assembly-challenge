@@ -1,0 +1,36 @@
+# Build artifacts
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.out
+
+# Executables
+*.exe
+
+# Compiled libraries
+*.a
+*.so
+*.dll
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build directories
+build/
+dist/
